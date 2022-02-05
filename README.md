@@ -81,10 +81,16 @@ scripts:
 slidy run build
 ```
 ```
-slidy g page paginas/{nomePagina}
+slidy g page pages/{pageName}
 ```
 ```
-slidy g m moduls/{nomeModulo} -c
+slidy g m features/{featureName} -c
+```
+```
+slidy generate widget widget/{widgetName}
+```
+```
+slidy g mbx store/{storeName}
 ```
 
 ##### Chocolatey:
