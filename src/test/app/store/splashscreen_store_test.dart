@@ -1,11 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:poc_flutter_web_backoffice/app/features/dashboard/dashboard_store.dart';
+import 'package:poc_flutter_web_backoffice/app/store/splashscreen_store.dart';
  
 void main() {
-  late DashboardStore store;
+  late SplashscreenStore store;
 
   setUpAll(() {
-    store = DashboardStore();
+    store = SplashscreenStore();
   });
 
   test('increment count', () async {
