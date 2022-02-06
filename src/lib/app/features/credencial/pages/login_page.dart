@@ -23,7 +23,7 @@ class LoginPageState extends State<LoginPage> {
         alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[LoginEntrarButton(onClick: _onClickLogin)],
+          children: <Widget>[LoginEntrarButtonWidget(onClick: _onClickLogin)],
         ),
       ),
     );
