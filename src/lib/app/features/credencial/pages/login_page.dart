@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import '../store/login_store.dart';
 import '../widget/LoginEntrarButton.dart';
 
 class LoginPage extends StatefulWidget {
@@ -10,11 +11,20 @@ class LoginPage extends StatefulWidget {
   LoginPageState createState() => LoginPageState();
 }
 
-_onClickLogin(BuildContext context) async {
-  Modular.to.navigate('/dashboard/home');
-}
+class LoginPageState extends ModularState<LoginPage, LoginStore> {
+  @override
+  void initState() {
+    super.initState();
+    print('Initstate LoginPageState');
+  }
 
-class LoginPageState extends State<LoginPage> {
+  _onClickLogin(BuildContext context) async {
+    setState(() {
+      //_saving = true;
+    });
+    Modular.to.navigate('/dashboard');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

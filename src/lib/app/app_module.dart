@@ -1,24 +1,24 @@
-import 'package:poc_flutter_web_backoffice/app/store/splashscreen_store.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import '../service_provider.dart';
 import 'features/credencial/credencial_module.dart';
 import 'features/dashboard/dashboard_module.dart';
 import 'features/onboarding/onboarding_module.dart';
-import 'pages/splashscreen_page.dart';
+import 'features/splashscreen/splashscreen_module.dart';
 
 class AppModule extends Module {
   @override
-  final List<Bind> binds = [
-    Bind.lazySingleton((i) => SplashscreenStore()),
-  ];
+  final List<Bind> binds = setupServiceProvider([]);
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute(Modular.initialRoute,
-        transition: TransitionType.noTransition,
-        child: (_, arges0) => SplashscreenPage()),
-    ModuleRoute('/credencial', module: CredencialModule()),
-    ModuleRoute('/onboarding', module: OnboardingModule()),
-    ModuleRoute('/dashboard', module: DashboardModule()),
+    ModuleRoute(Modular.initialRoute,
+        module: SplashscreenModule(), transition: TransitionType.noTransition),
+    ModuleRoute('/credencial',
+        module: CredencialModule(), transition: TransitionType.noTransition),
+    ModuleRoute('/onboarding',
+        module: OnboardingModule(), transition: TransitionType.noTransition),
+    ModuleRoute('/dashboard',
+        module: DashboardModule(), transition: TransitionType.noTransition),
   ];
 }

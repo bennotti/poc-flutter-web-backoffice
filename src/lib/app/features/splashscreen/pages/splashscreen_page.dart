@@ -29,8 +29,8 @@ class SplashscreenPageState
 
   @override
   void dispose() {
-    super.dispose();
     disposer();
+    super.dispose();
   }
 
   @override

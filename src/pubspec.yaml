@@ -37,6 +37,14 @@ dependencies:
   flutter_modular: ^3.2.0
   mobx: ^2.0.1
   flutter_mobx: ^2.0.0
+  datetime_picker_formfield: ^2.0.0
+  mask_text_input_formatter: ^2.1.0
+  date_format: ^2.0.5
+  carousel_slider: ^4.0.0
+  dio: ^4.0.4
+  hive: ^2.0.5
+  fl_chart: ^0.41.0
+  shared_preferences: ^2.0.13
 
 dev_dependencies:
   flutter_test:
