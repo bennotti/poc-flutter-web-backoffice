@@ -23,7 +23,7 @@ class SplashscreenPageState
     disposer = autorun((_) async {
       await store.checkLogin();
 
-      Modular.to.navigate('/login');
+      Modular.to.navigate('/credencial/login');
     });
   }
 
