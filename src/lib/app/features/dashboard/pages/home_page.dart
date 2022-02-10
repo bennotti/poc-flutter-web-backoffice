@@ -18,17 +18,47 @@ class HomePageState extends ModularState<HomePage, HomeStore> {
       body: Row(
         children: <Widget>[
           SidebarWidget(),
-          Container(
-            color: Colors.indigo[200],
-            alignment: Alignment.center,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  color: Colors.amber,
-                  child: Text("Home"),
-                ),
-              ],
+          Expanded(
+            child: Container(
+              height: MediaQuery.of(context).size.height,
+              child: DataTable(
+                columns: [
+                  DataColumn(
+                      label: Text('ID',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold))),
+                  DataColumn(
+                      label: Text('Name',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold))),
+                  DataColumn(
+                      label: Text('Profession',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold))),
+                ],
+                rows: [
+                  DataRow(cells: [
+                    DataCell(Text('1')),
+                    DataCell(Text('Stephen')),
+                    DataCell(Text('Actor')),
+                  ]),
+                  DataRow(cells: [
+                    DataCell(Text('5')),
+                    DataCell(Text('John')),
+                    DataCell(Text('Student')),
+                  ]),
+                  DataRow(cells: [
+                    DataCell(Text('10')),
+                    DataCell(Text('Harry')),
+                    DataCell(Text('Leader')),
+                  ]),
+                  DataRow(cells: [
+                    DataCell(Text('15')),
+                    DataCell(Text('Peter')),
+                    DataCell(Text('Scientist')),
+                  ]),
+                ],
+              ),
             ),
           ),
         ],
