@@ -45,6 +45,11 @@ dependencies:
   hive: ^2.0.5
   fl_chart: ^0.41.0
   shared_preferences: ^2.0.13
+  window_manager: ^0.1.7
+  # window_size:
+  #   git:
+  #     url: git://github.com/google/flutter-desktop-embedding.git
+  #     path: plugins/window_size
 
 dev_dependencies:
   flutter_test:
