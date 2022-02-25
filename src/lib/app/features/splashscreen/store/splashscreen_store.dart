@@ -11,6 +11,6 @@ abstract class _SplashscreenStoreBase with Store {
   final aplicacaoBusinessRules = Modular.get<IAplicacaoBusinessRules>();
   @action
   Future<bool> checkLogin() async {
-    return Future.delayed(Duration(milliseconds: 7000), () => false);
+    return Future.delayed(Duration(milliseconds: 1000), () => false);
   }
 }

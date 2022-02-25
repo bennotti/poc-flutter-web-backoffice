@@ -8,23 +8,71 @@ class SidebarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final routes = List.generate(50, (i) => 'test $i');
+    final routes = List.generate(10, (i) => 'test $i');
     return Container(
+        width: 150,
         child: SafeArea(
             right: false,
             child: Drawer(
               elevation: 0,
               child: ListView(
                 children: <Widget>[
-                  for (final s in routes)
-                    ListTile(
-                      title: Text(s),
-                      onTap: () {
-                        // Using navigator key, because the widget is above nested navigator
-                        Modular.to.navigate('/dashboard/another-page');
-                        // navigatorKey.currentState.pushNamed(s);
-                      },
-                    ),
+                  ListTile(
+                    title: Text('Logo'),
+                    onTap: () {
+                      // Using navigator key, because the widget is above nested navigator
+                      Modular.to.navigate('/dashboard/another-page');
+                      // navigatorKey.currentState.pushNamed(s);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Meu dia'),
+                    onTap: () {
+                      // Using navigator key, because the widget is above nested navigator
+                      Modular.to.navigate('/dashboard/another-page');
+                      // navigatorKey.currentState.pushNamed(s);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Tarefas'),
+                    onTap: () {
+                      // Using navigator key, because the widget is above nested navigator
+                      Modular.to.navigate('/dashboard/another-page');
+                      // navigatorKey.currentState.pushNamed(s);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Tarefa pasta'),
+                    onTap: () {
+                      // Using navigator key, because the widget is above nested navigator
+                      Modular.to.navigate('/dashboard/another-page');
+                      // navigatorKey.currentState.pushNamed(s);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Tarefa lista'),
+                    onTap: () {
+                      // Using navigator key, because the widget is above nested navigator
+                      Modular.to.navigate('/dashboard/another-page');
+                      // navigatorKey.currentState.pushNamed(s);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Nova lista'),
+                    onTap: () {
+                      // Using navigator key, because the widget is above nested navigator
+                      Modular.to.navigate('/dashboard/another-page');
+                      // navigatorKey.currentState.pushNamed(s);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Nova pasta'),
+                    onTap: () {
+                      // Using navigator key, because the widget is above nested navigator
+                      Modular.to.navigate('/dashboard/another-page');
+                      // navigatorKey.currentState.pushNamed(s);
+                    },
+                  ),
                 ],
               ),
             )));

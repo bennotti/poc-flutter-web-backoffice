@@ -30,15 +30,20 @@ void main() async {
     await windowManager.ensureInitialized();
 
     // Use it only after calling `hiddenWindowAtLaunch`
+    // await DesktopWindow.setMinWindowSize(Size(800, 600));
+    // await DesktopWindow.setMaxWindowSize(Size(800, 600));
+    // await DesktopWindow.setFullScreen(false);
     windowManager.waitUntilReadyToShow().then((_) async {
       // Hide window title bar
       // await windowManager.setTitleBarStyle('hidden');
       await windowManager.setSize(Size(800, 600));
       await windowManager.setMaximumSize(Size(800, 600));
       await windowManager.setMinimumSize(Size(800, 600));
-      await windowManager.center();
-      await windowManager.show();
+      // await windowManager.center();
       await windowManager.setMinimizable(false);
+      await windowManager.setResizable(false);
+      await windowManager.setFullScreen(false);
+      // await windowManager.setTitleBarStyle();
       //setAlwaysOnTop
       //setTitle
       //setTitleBarStyle
