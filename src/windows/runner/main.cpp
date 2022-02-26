@@ -23,9 +23,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
       GetCommandLineArguments();
 
   project.set_dart_entrypoint_arguments(std::move(command_line_arguments));
+  FlutterWindow window(project);
   const int ScreenX = (GetSystemMetrics(SM_CXSCREEN) - 800) / 2;
   const int ScreenY = (GetSystemMetrics(SM_CYSCREEN) - 600) / 2;
-  FlutterWindow window(project);
   Win32Window::Point origin(ScreenX, ScreenY);
   Win32Window::Size size(800, 600);
   if (!window.CreateAndShow(L"poc_flutter_web_backoffice", origin, size)) {

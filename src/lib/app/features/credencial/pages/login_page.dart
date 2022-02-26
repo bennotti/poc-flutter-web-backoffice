@@ -50,9 +50,9 @@ class LoginPageState extends ModularState<LoginPage, LoginStore> {
               ),
             ),
             Container(
-              width: 550,
+              width: 350,
               padding: EdgeInsets.only(
-                  top: 15.0, right: 70.0, left: 70.0, bottom: 10.0),
+                  top: 15.0, right: 20.0, left: 20.0, bottom: 10.0),
               child: Column(
                 children: <Widget>[
                   Text(

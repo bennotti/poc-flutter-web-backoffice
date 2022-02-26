@@ -12,7 +12,7 @@ class LoginEntrarButtonWidget extends StatelessWidget {
       children: <Widget>[
         InkWell(
             child: Container(
-          height: 100,
+          height: 50,
           decoration: BoxDecoration(color: Colors.transparent),
           child: Material(
             color: Colors.transparent,
