@@ -39,7 +39,6 @@ void main() async {
       await windowManager.setSize(Size(800, 600));
       await windowManager.setMaximumSize(Size(800, 600));
       await windowManager.setMinimumSize(Size(800, 600));
-      // await windowManager.center();
       await windowManager.setMinimizable(false);
       await windowManager.setResizable(false);
       await windowManager.setFullScreen(false);
